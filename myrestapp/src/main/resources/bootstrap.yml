@@ -9,5 +9,6 @@ spring:
         enabled: false
       secrets:        name: ldap-secrets
         paths: /etc/secrets/ldap-secrets
+        enable-api: true
 
         
