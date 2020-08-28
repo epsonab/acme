@@ -11,5 +11,5 @@ spec:
         - name: LDAP_PASSWORD
           valueFrom:
             secretKeyRef:
-              name:ldap-secrets
+              name: ldap-secrets
               key: ldap.password
