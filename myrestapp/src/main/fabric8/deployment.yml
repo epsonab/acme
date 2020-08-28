@@ -1,0 +1,15 @@
+spec:
+  template:
+    spec:
+      containers:
+      - env:
+        - name: LDAP_USER
+          valueFrom:
+            secretKeyRef:
+              name: ldap-secrets
+              key: ldap.user
+        - name: LDAP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name:ldap-secrets
+              key: ldap.password

@@ -7,3 +7,6 @@ spring:
         name: acme-git-config
       reload:
         enabled: false
+      secrets:        name: ldap-secrets
+
+        

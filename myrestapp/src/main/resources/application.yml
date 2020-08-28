@@ -1,11 +1,13 @@
 server:
   port: 8080
-  
+ 
+commonprops:
+  message: HelloInt
+ 
 ldap:
-  message: '"Hello2"'
-  password: ldappassword2
-  user: ldapuser2
-  
+  user: ldapuserInt
+  password: ldappasswordInt
+ 
 logging:
   level:
     org:

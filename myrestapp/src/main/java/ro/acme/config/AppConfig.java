@@ -8,10 +8,15 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
 	@Bean
+	@ConfigurationProperties(prefix = "commonprops")
+	public AcmeCommonProperties commonPropertie() {
+		return new AcmeCommonProperties();
+	}
+
+	@Bean
 	@ConfigurationProperties(prefix = "ldap")
 	public AcmeLdapProperties ldapProperties() {
 		return new AcmeLdapProperties();
 	}
-	
-	
+
 }

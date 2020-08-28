@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ro.acme.config.AcmeCommonProperties;
 import ro.acme.config.AcmeLdapProperties;
 import ro.acme.model.InfoModel;
 
@@ -18,16 +19,19 @@ public class Myrestapi {
 	@Autowired
 	private AcmeLdapProperties ldapProperties;
 
+	@Autowired
+	private AcmeCommonProperties commonProperties;
+
 	@GetMapping(path = "/appinfo", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<InfoModel> appInfo() {
 
 		InfoModel im = new InfoModel();
-		im.setMessage(ldapProperties.getMessage());
+		im.setMessage(commonProperties.getMessage());
+		
 		im.setLdapUser(ldapProperties.getUser());
 		im.setLdapPassword(ldapProperties.getPassword());
 
 		return new ResponseEntity<>(im, HttpStatus.OK);
-
 	}
 
 }
