@@ -21,10 +21,8 @@ public class Myrestapi {
 	@GetMapping(path = "/appinfo", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<InfoModel> appInfo() {
 
-		String msg = "Hello";
-
 		InfoModel im = new InfoModel();
-		im.setMessage(msg);
+		im.setMessage(ldapProperties.getMessage());
 		im.setLdapUser(ldapProperties.getUser());
 		im.setLdapPassword(ldapProperties.getPassword());
 
