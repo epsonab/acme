@@ -13,3 +13,4 @@ spec:
             secretKeyRef:
               name: ldap-secrets
               key: ldap.password
+

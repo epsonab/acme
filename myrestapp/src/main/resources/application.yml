@@ -5,8 +5,8 @@ commonprops:
   message: HelloInt
  
 ldap:
-  user: ldapuserInt
-  password: ldappasswordInt
+  user: ${LDAP_USER}
+  password: ${LDAP_PASSWORD}
  
 logging:
   level:
