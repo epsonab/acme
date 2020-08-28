@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  
+ldap:
+  message: '"Hello2"'
+  password: ldappassword2
+  user: ldapuser2
+  
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE

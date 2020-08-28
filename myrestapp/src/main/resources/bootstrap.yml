@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: myrestapp
+  cloud:
+    kubernetes:
+      config:
+        name: acme-git-config
+      reload:
+        enabled: true
