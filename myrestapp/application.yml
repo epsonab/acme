@@ -4,6 +4,10 @@ server:
 commonprops:
   message: HelloInt
  
+ldap:
+  user: ${LDAP_USER}
+  password: ${LDAP_PASSWORD}
+ 
 logging:
   level:
     org:

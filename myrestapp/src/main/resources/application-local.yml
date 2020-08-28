@@ -1,0 +1,3 @@
+ldap:
+  user: user_local
+  password: parola_local

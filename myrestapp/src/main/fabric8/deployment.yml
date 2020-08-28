@@ -3,6 +3,8 @@ spec:
     spec:
       containers:
       - env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: ldap
         - name: LDAP_USER
           valueFrom:
             secretKeyRef:
