@@ -6,9 +6,8 @@ spring:
       config:
         name: acme-git-config
       reload:
-        enabled: false
+        enabled: true
       secrets:        name: ldap-secrets
-        paths: /etc/secrets/ldap-secrets
         enable-api: true
 
         
