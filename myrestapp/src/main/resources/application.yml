@@ -1,7 +1,7 @@
 server:
-  port: 8443
+  port: 8080
   ssl:
-    enabled: true
+    enabled: false
     key-store: classpath:security/keystore.jks
     key-alias: digicert_aliaspaytest.servicii.transfond.ro
     key-password: changeit
