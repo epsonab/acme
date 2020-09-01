@@ -7,7 +7,7 @@ server:
     key-password: changeit
     trust-store: classpath:security/truststore.jks
     trust-store-password: changeit
-    client-auth: need
+    client-auth: want
  
 commonprops:
   message: HelloInt
