@@ -1,10 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    openshift.io/host.generated: 'true'
+  name: myrestapp
 spec:
-  template:
-    spec:
-      to:
-        kind: Service
-      port:
-        targetPort: 8443-tcp
-      tls:
-        termination: passthrough
-        insecureEdgeTerminationPolicy: Redirect
+  to:
+    kind: Service
+    name: myrestapp
+    weight: 100
+  port:
+    targetPort: 8443-tcp
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect
