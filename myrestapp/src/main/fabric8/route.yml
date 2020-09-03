@@ -1,0 +1,12 @@
+spec:
+  template:
+    spec:
+      to:
+        kind: Service
+        name: myrestacme
+        weight: 100
+      port:
+        targetPort: 8443-tcp
+      tls:
+        termination: passthrough
+        insecureEdgeTerminationPolicy: Redirect
